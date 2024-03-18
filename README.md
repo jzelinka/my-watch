@@ -1,9 +1,16 @@
-# ITS8020-final-project
-
 This repository contains an implementation of the `watch` command.
 The binary can be built with the help of appended `Makefile`.
-The command includes options to set the amount of idling seconds
-and beep on unsuccessful execution of the watched command.
+Implemented are the following features descibed in the `help` message:
+```
+Usage:
+ watch [options] command
+
+Options:
+  -b, --beep                beep if command has a non-zero exit
+  -n, --interval <secs>     seconds to wait between updates
+
+  -h, --help                display this help and exit
+```
 
 The code utilizes `getopt` to gather the command line options,
 `fork` and `exec` to execute the watched command and
